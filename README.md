@@ -791,6 +791,8 @@ CREATE DATABASE football_staging WITH OWNER = postgres ENCODING = 'UTF8';
 
 # ÉTAPE 8 — Créer le script de chargement PostgreSQL
 Crée scripts/ingestion/load_to_postgres.py et colle :
+
+@"
 """
 Chargement des données JSON brutes vers PostgreSQL (tables staging).
 Transforme les JSON en lignes SQL puis les insère en base.
@@ -1164,7 +1166,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+"@ | Out-File -FilePath "scripts/ingestion/load_to_postgres.py" -Encoding utf8
 
 🧠 CONCEPTS expliqués :
 | Concept                               | Explication                                                                          |
