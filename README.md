@@ -193,7 +193,7 @@ echo "jupyter" >> requirements.txt
 echo "pytest" >> requirements.txt
 echo "dotenv" >> requirements.txt
 echo "psycopg2" >> requirements.txt
-
+echo "loguru" >> requirements.txt
 NB : 
 >> ajout
 > ecrase
@@ -497,7 +497,7 @@ from loguru import logger
 # On ajoute la racine du projet pour pouvoir faire :
 #   from config.settings import ...
 # sans erreur "ModuleNotFoundError"
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 from config.settings import (
     FOOTBALL_API_KEY,
