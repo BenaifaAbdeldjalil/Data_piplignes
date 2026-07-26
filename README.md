@@ -474,9 +474,12 @@ python config/settings.py
 
 # ÉTAPE 6 — Créer le script d'ingestion API
 Crée scripts/ingestion/fetch_api_data.py et colle :
+@"
 """
 Script d'ingestion des données depuis l'API football-data.org.
 Sauvegarde les réponses JSON brutes dans data/raw/api/
+
+
 """
 
 import json
@@ -750,6 +753,7 @@ def main():
 if __name__ == "__main__":
     main()
 
+"@ | Out-File -FilePath "scripts/ingestion/fetch_api_data.py" -Encoding utf8
 
 🧠 CONCEPTS PYTHON expliqués :
 | Concept                      | Explication                                                                     |
